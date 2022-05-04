@@ -28,8 +28,8 @@ int main() {
 }
 
 //파일 1의 정보를 가져오는 함수 작성
-void filestat1() {
-    stat('./text1', &stat1);
+void filestat1(){
+    stat(". /text1", &stat1);
 }
 
 //파일 2의 정보를 가져오는 함수 작성
@@ -38,13 +38,13 @@ void filestat2() {
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
-void filetime1() {
+void filetime1(){
     // time of the last modification
     time1 = localtime(&stat1.st_mtime);
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
-void filetime2() {
+void filetime2(){
     // time of the last modification
     time1 = localtime(&stat1.st_mtime);
 }
@@ -61,7 +61,7 @@ void sizecmp() {
     }
 
     else if (size_of_file2 > size_of_file1) {
-        printf("text_2 is biggerthan text_1.\n");
+        printf("text_2 is bigger than text_1.\n");
     }
 
     else {
@@ -72,7 +72,7 @@ void sizecmp() {
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
-void blockcmp() {
+void blockcmp(){
     int file1_block_cnt = stat1.st_blocks;
     int file2_block_cnt = stat2.st_blocks;
 
@@ -129,7 +129,7 @@ void datecmp() {
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
-void timecmp() {
+void timecmp(){
     printf("time compare\n");
 
     time1 = localtime(&stat1.st_mtime);
